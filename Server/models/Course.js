@@ -1,60 +1,47 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const courseSchema = new mongoose.Schema({
-    CourseName:{
-        type: String,
-        trim:true,
-        required: true,
+    courseName: {
+        type:String,
     },
-    courseDescription:{
-        type: String,
-        trim:true,
+    courseDescription: {
+        type:String,
     },
-    instructor:{
-        type: mongoose.Schema.Types.ObjectId,
+    instructor: {
+        type:mongoose.Schema.Types.ObjectId,
         ref:"User",
-        required: true,
+        required:true,
     },
     whatYouWillLearn: {
-        type: [String],
-        
+        type:String,
     },
-    courseContent: [{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Section",
-    }],
-
-    ratingAndReviews: [
+    courseContent: [
         {
-            type: mongoose.Schema.Types.ObjectId,
-            ref:"RatingAndReviews",
-            
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Section",
         }
     ],
-
-    price:{
-        type:number,
-        required: true,
-    },
-
-    thumbnail:{
-        type: String,
-        
-    },
-
-    tag:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref: "Tag"
-    },
-
-    studentsEnrolled:[
+    ratingAndReviews: [
         {
-            type: mongoose.Schema.Types.ObjectId,
-            ref:"User" , 
-            required: true,  
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"RatingAndReview",
         }
-],
-    
+    ],
+    price:{
+        type:Number,
+    },
+    thumbnail:{
+        type:String,
+    },
+    tag: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"Tag",
+    },
+    studentsEnrolled: [{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true,
+        ref:"User",
+    }]
 });
 
 module.exports = mongoose.model("Course", courseSchema);

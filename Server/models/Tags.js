@@ -1,17 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const tagsSchema = new mongoose.Schema({
-    
     name:{
         type:String,
-        required:true,
-        ref: "User",
+        required: true,
     },
-    description:{
+    description: {
         type:String,
     },
-
-    course:{
+    course: {
         type:mongoose.Schema.Types.ObjectId,
         ref:"Course",
     },
