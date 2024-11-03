@@ -8,20 +8,20 @@ const contactDetails = [
       icon: "HiChatBubbleLeftRight",
       heading: "Chat on us",
       description: "Our friendly team is here to help.",
-      details: "prabhatsingh.sr@gmail.com",
+      details: "farhantufailaltaf@gmail.com",
     },
     {
       icon: "BiWorld",
       heading: "Visit us",
       description: "Come and say hello at our office HQ.",
       details:
-        "1/6352 A, Naveen nagar, Ojpura, Saharanpur-247001",
+        "32, Okhla market, Jamia Nagar, New Delhi - 110025",
     },
     {
       icon: "IoCall",
       heading: "Call us",
       description: "Mon - Fri From 8am to 5pm",
-      details: "+91 63974 52625",
+      details: "+91 87006 63935",
     },
   ]
 
