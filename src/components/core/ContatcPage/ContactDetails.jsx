@@ -15,7 +15,7 @@ const contactDetails = [
       heading: "Visit us",
       description: "Come and say hello at our office HQ.",
       details:
-        "32, Okhla market, Jamia Nagar, New Delhi - 110025",
+        "A-32, Okhla market, Jamia Nagar, New Delhi - 110025",
     },
     {
       icon: "IoCall",
